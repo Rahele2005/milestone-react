@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AppContext } from './App';
 
 const TweetInput = ({ addTweet }) => {
   const [tweet, setTweet] = useState('');
+  const { user } = useContext(AppContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTweet(tweet);
+    addTweet({ content: tweet, author: user.name, date: new Date() });
     setTweet('');
   };
 

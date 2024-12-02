@@ -5,7 +5,7 @@ const TweetList = ({ tweets }) => {
   return (
     <ul>
       {tweets.map((tweet, index) => (
-        <Tweet key={index} content={tweet} />
+        <Tweet key={index} tweet={tweet} />
       ))}
     </ul>
   );

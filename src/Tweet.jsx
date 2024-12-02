@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
+import TweetInteractions from './TweetInteractions';
 
-const Tweet = ({ content }) => {
+const Tweet = ({ tweet }) => {
+  const [likes, setLikes] = useState(0);
+
+  const handleLike = () => {
+    setLikes(likes + 1);
+  };
+
   return (
     <li>
-      <p>{content}</p>
+      <p>{tweet.content}</p>
+      <small>By {tweet.author} on {tweet.date.toString()}</small>
+      <TweetInteractions likes={likes} onLike={handleLike} />
     </li>
   );
 };
