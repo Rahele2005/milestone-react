@@ -76,11 +76,20 @@ header {
 }
 
 /* Main Content */
-main {
+/*main {
   margin-left: 20%;
   padding: 20px;
   background-color: var(--bg-color);
   min-height: 100vh;
+}
+*/
+main {
+  min-height: 100vh; 
+  padding: 20px;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 /* Form Styling */
@@ -178,4 +187,55 @@ ul li p {
   ul li h4 {
     font-size: 16px;
   }
+}
+/* Sidebar Styling */
+.sidebar {
+  background-color: #f0f8ff;
+  width: 20%;
+  min-height: 100vh;
+  float: left;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/* Navigation Links in Sidebar */
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sidebar nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+/* Home Page Styling (you can expand this later) */
+.home-page {
+  padding: 20px;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.explore-page,
+.notifications-page,
+.messages-page {
+  padding: 20px;
+  background-color: #fff;
+  min-height: 100vh;
 }
